@@ -2,6 +2,8 @@
 
 > 🦕 You have fun coding!
 
+[Preview URL 💻](https://devchallengues.pages.dev/)
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
