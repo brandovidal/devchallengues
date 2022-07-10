@@ -5,7 +5,9 @@ import Card from "../components/Card.astro";
 
 <Layout title="Devchallenges">
 	<main>
-		<h1>Devchallenges</h1>
+		<h1>
+			<img src="/devchallengues.svg" alt="">
+		</h1>
 		<p class="instructions">
 			Responsive Web Developer
 		</p>
@@ -45,7 +47,17 @@ import Card from "../components/Card.astro";
 	}
 
 	h1 {
-		margin: 2rem 0;
+		display: flex;
+		margin: 0.35em 0.35em 0.5em 0.35em;
+		font-size: 4em;
+	}
+
+	h1 img {
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+		color: var(--color-text);
+		width: 3em;
 	}
 
 	main {
@@ -58,7 +70,7 @@ import Card from "../components/Card.astro";
 		line-height: 1.6;
 		margin: 1rem 0;
 		background-image: var(--bg-gradient);
-		padding: 1rem;
+		padding: 1rem 1.5em;
 		border-radius: 0.4rem;
 		color: var(--color-bg);
 		background-position-y: 100%;

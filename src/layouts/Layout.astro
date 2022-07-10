@@ -31,6 +31,7 @@ const { title } = Astro.props as Props;
 </head>
 
 <body>
+	<!-- <div class="background-image"></div> -->
 	<slot />
 </body>
 
@@ -40,14 +41,15 @@ const { title } = Astro.props as Props;
 	@import url('https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css');
 
 	:root {
-		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+		--font-size-base: clamp(0.9rem, 0.34vw + 0.7rem, 0.95rem);
+		--font-size-md: clamp(1rem, 0.5vw + 0.95rem, 1.25rem);
 		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
 		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 
 		--color-text: #100e1d;
 		--color-bg: hsl(10, 21%, 95%);
 		--color-border: hsl(17, 24%, 90%);
-		--color-gradient: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+		--color-gradient: linear-gradient(90deg, #ffffff 0%, #f5f0f0 74%);
 	}
 
 	html {
@@ -58,6 +60,7 @@ const { title } = Astro.props as Props;
 	}
 
 	body {
+		position: relative;
 		margin: 0;
 		font-size: 16px;
 		background-color: var(--color-bg);
