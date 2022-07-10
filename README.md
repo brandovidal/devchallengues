@@ -1,8 +1,6 @@
-# Welcome to [Astro](https://astro.build)
+# [Dev Challengues](https://devchallenges.io/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> 🦕 You have fun coding!
 
 ## 🚀 Project Structure
 
@@ -12,19 +10,17 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 │   └── favicon.ico
+│   └── logo192.png
+│   └── logo512.png
 ├── src/
+│   ├── components/
+│   │   └── Card.astro
 │   ├── components/
 │   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -37,6 +33,18 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build`   | Build your production site to `./dist/`      |
 | `npm run preview` | Preview your build locally, before deploying |
 
-## 👀 Want to learn more?
+## 🎮 Overview
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+_Screenshot Laptop_
+
+![Screenshot Laptop](./public/desktop.png)
+
+_Screenshot Mobile_
+
+![Screenshot Mobile](./public/mobile.png)
+
+## 😎 Contact
+
+<p><em>Software Developer <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></p>
+
+[![Twitter: Brando Vidal](https://img.shields.io/twitter/follow/_brandovidal?label=Follow)](https://bit.ly/brando-vidal-twitter) [![GitHub Brando Vidal](https://img.shields.io/github/followers/brandovidal?label=follow&style=social)](https://bit.ly/brando-vidal-github)

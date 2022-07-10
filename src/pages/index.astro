@@ -11,22 +11,32 @@ import Card from "../components/Card.astro";
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
+				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252F404PageThumbnail.png%3Falt%3Dmedia%26token%3D81f7c567-c0bc-446f-a549-07eeda31c5ef&w=750&q=75"
+				demo="https://404-not-found-324.pages.dev/" code="https://github.com/brandovidal/404-not-found"
+				title="404 Not found"
+				body="This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills. 👾" />
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
+				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252FmyTeamThumbnail.png%3Falt%3Dmedia%26token%3D3dc1bba0-52b9-440d-8a54-fa31ec7c84d8&w=750&q=75"
+				demo="https://hulking-tramp.surge.sh/" code="https://github.com/brandovidal/my-team-page"
+				title="My team page"
+				body="This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page. 🚀" />
+			<Card
+				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252FinteriorConsultantThumbnail.png%3Falt%3Dmedia%26token%3Dfb5f8229-8eb9-4d70-b0d4-fbd2829a0cf0&w=750&q=75"
+				demo="https://fast-frogs.surge.sh/" code="https://github.com/brandovidal/interior-consultant"
+				title="Interior Consultant"
+				body="Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning. ⚒️" />
+			<Card
+				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252FrecipeBlogThumbnail.png%3Falt%3Dmedia%26token%3D2d696d3c-a8cb-4c7c-907b-561ae1144cc9&w=750&q=75"
+				demo="https://plucky-cover.surge.sh/" code="https://github.com/brandovidal/recipe-page"
+				title="Recipe page"
+				body="Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one. ❤️" />
 		</ul>
 	</main>
 </Layout>
 
 <style>
 	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+		--bg-gradient: linear-gradient(90deg, #100e1d, #bdbdbc);
 	}
 
 	h1 {
@@ -36,49 +46,23 @@ import Card from "../components/Card.astro";
 	main {
 		margin: auto;
 		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
+		max-width: 65ch;
 	}
 
 	.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
-		background: #4f39fa;
+		background-image: var(--bg-gradient);
 		padding: 1rem;
 		border-radius: 0.4rem;
 		color: var(--color-bg);
+		background-position-y: 100%;
 	}
 
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
+		gap: 1.5em;
 		padding: 0;
 	}
 </style>

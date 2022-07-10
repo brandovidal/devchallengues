@@ -1,86 +1,116 @@
 ---
 export interface Props {
+	link?: string;
 	title: string;
 	body: string;
-	href: string;
+	demo?: string;
+	code?: string;
 }
-const { href, title, body } = Astro.props;
+const { title, body, link = 'https://picsum.photos/id/532/584/434', demo='#', code='#' } = Astro.props;
 ---
 
-<li class="link-card">
-	<picture><img src="https://picsum.photos/id/532/584/434" alt="Photo" /></picture>
-	<article>
+<li class="card">
+	<picture>
+		<img src={link} alt={title} />
+	</picture>
+	<div>
 		<h2>{title}</h2>
 		<p>{body}</p>
-		<a class="link-primary" href={href}>Demo</a>
-		<a class="link-outline" href={href}>Code</a>
-	</article>
+		<div class="links">
+			<a class="link-primary" href={demo} target="_blank" rel="noopener noreferrer">Demo</a>
+			<a href={code} target="_blank" rel="noopener noreferrer">Code</a>
+		</div>
+	</div>
 </li>
 <style>
 	:root {
-		--link-gradient: linear-gradient(45deg, #4f39fa, #da62c4 30%, var(--color-border) 60%);
+		--bg-white: #ffffff;
+		--bg-primary: #2f80ed;
+		--bg-secondary: #8f8e91;
+		--bg-dark: #100e1d;
+		--bg-gradient: linear-gradient(90deg, #100e1d, #bdbdbc);
+
 		--border-radius-md: 0.5rem;
 	}
 
-	.link-card {
+	.card {
 		list-style: none;
 		display: flex;
 		flex-direction: column;
-		padding: 0.15rem;
-		background-image: var(--link-gradient);
-		background-size: 400%;
+		padding: 1.25em;
 		border: none;
-		border-radius: 0.5rem;
-		background-position: 100%;
-		background: #ffffff;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-
-	.link-card:hover {
-		cursor: auto;
-		box-shadow: 0 0 2em rgba(51, 51, 51, 0.2), -10px -10px 30px rgba(51, 51, 51, 0.2);
-	}
-
-	.link-card picture {
-		width: 100%;
-		height: 100%;
 		border-radius: var(--border-radius-md);
+		box-shadow: none;
+		background: var(--bg-white);
+		transition: box-shadow 0.3s ease-in;
+	}
+
+	.card:is(:hover, :focus-within) {
+		box-shadow: 0 0 6em rgba(51, 51, 51, 0.3);
+	}
+
+	.card picture {
+		width: 100%;
+		min-height: 17ch;
 		object-fit: cover;
 		object-position: center;
 	}
-
-	.link-card>a {
-		width: 100%;
+	.card picture img {
+		height: min-content;
+		border-radius: var(--border-radius-md);
+	}
+	.card a {
+		display: inline;
+		/* width: 100%; */
 		text-decoration: none;
 		line-height: 1.4;
-		padding: 1em 1.3em;
-		border: none;
-		border-radius: 0.35rem;
-		color: var(--text-color);
-		background-color: white;
-		opacity: 0.8;
+		padding: 0.5em 1.1em;
+		border: 1px solid var(--bg-secondary);
+		border-radius: var(--border-radius-md);
+		background: var(--bg-white);
+		color: var(--bg-dark);
+		transition: border 0.3s ease-in;
 	}
 
-	h2 {
+	.card a:hover,
+	.card a:focus {
+		cursor: pointer;
+		outline: none;
+		border: 1px solid var(--bg-primary);
+		color: var(--bg-primary);
+	}
+
+	.card a.link-primary {
+		background: var(--bg-dark);
+		color: var(--bg-white);
+		transition: background 300ms ease-in;
+	}
+
+	.card a.link-primary:hover,
+	.card a.link-primary:focus {
+		background: var(--bg-white);
+		border: 1px solid var(--bg-dark);
+		color: var(--bg-dark);
+	}
+
+	.card h2 {
 		margin: 0;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		font-size: 1.5em;
+		line-height: 1.65em;
+	}
+	.card p {
+		margin: 0.75em 0;
+		height: 7em;
+		font-size: 0.95em;
+		line-height: 1.2em;
+		color: var(--bg-secondary);
+		font-weight: 500;
 	}
 
-	p {
-		margin-top: 0.75rem;
-		margin-bottom: 0;
-	}
-
-	h2 span {
-		display: inline-block;
-		transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-	}
-
-	.link-card:is(:hover, :focus-within) h2 span {
-		transform: translateX(2px);
+	.card div.links {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 3em;
 	}
 </style>
