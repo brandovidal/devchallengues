@@ -1,4 +1,4 @@
-# [Dev Challengues](https://devchallenges.io/)
+# [devChallengues](https://devchallenges.io/)
 
 > 🦕 You have fun coding!
 
@@ -15,7 +15,7 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── src/
 │   ├── components/
 │   │   └── Card.astro
-│   ├── components/
+│   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
