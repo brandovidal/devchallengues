@@ -1,24 +1,24 @@
 ---
 export interface Props {
-	link?: string;
+	image?: string;
 	title: string;
-	body: string;
-	demo?: string;
-	code?: string;
+	description: string;
+	link?: string;
+	github?: string;
 }
-const { title, body, link = 'https://picsum.photos/id/532/584/434', demo = '#', code = '#' } = Astro.props;
+const { title, description, image = 'https://picsum.photos/id/532/584/434', link = '#', github = '#' } = Astro.props;
 ---
 
 <li class="card">
 	<picture>
-		<img src={link} alt={title} />
+		<img src={image} alt={title} />
 	</picture>
 	<div>
 		<h2>{title}</h2>
-		<p>{body}</p>
+		<p>{description}</p>
 		<div class="links">
-			<a class="link-primary" href={demo} target="_blank" rel="noopener noreferrer">Demo</a>
-			<a href={code} target="_blank" rel="noopener noreferrer">Code</a>
+			<a class="link-primary" href={link} target="_blank" rel="noopener noreferrer">Demo</a>
+			<a href={github} target="_blank" rel="noopener noreferrer">Code</a>
 		</div>
 	</div>
 </li>

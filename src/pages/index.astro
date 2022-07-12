@@ -1,6 +1,73 @@
 ---
+export interface Props {
+	title: string;
+	description: string;
+	image?: string;
+	link?: string;
+	github?: string;
+}
+
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+
+const projects: Props[] = [
+	{
+		title: "404 Not found",
+		description: "This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills. 👾",
+		image: "https://i.imgur.com/IQ8LlOW.png",
+		link: "https://404-not-found-324.pages.dev/",
+		github: 'https://github.com/brandovidal/404-not-found'
+	},
+	{
+		title: "My team page",
+		description: "This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page. 🚀",
+		image: "https://i.imgur.com/DmjNYWf.png",
+		link: "https://my-team-page-a1o.pages.dev/",
+		github: 'https://github.com/brandovidal/my-team-page'
+	},
+	{
+		title: "Interior Consultant",
+		description: "Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning. ⚒️",
+		image: "https://i.imgur.com/v0whVdg.png",
+		link: "https://interior-consultant.pages.dev/",
+		github: 'https://github.com/brandovidal/interior-consultant'
+	},
+	{
+		title: "Recipe page",
+		description: "Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one. 😎",
+		image: "https://i.imgur.com/ZrYjmPH.png",
+		link: "https://recipe-page.pages.dev/",
+		github: 'https://github.com/brandovidal/recipe-page'
+	},
+	{
+		title: "My Gallery",
+		description: "Inspired by instagram, in this challenge you will work with a similar design to instagram profile page. 📷",
+		image: "https://i.imgur.com/zTUWjKT.png",
+		link: "https://my-gallery-page.pages.dev/",
+		github: 'https://github.com/brandovidal/my-gallery-page'
+	},
+	{
+		title: "Checkout Page",
+		description: "In this challenge, you will work with the form in a modern and minimal design. The challenge will bring your HTML and CSS to a new level. 💻",
+		image: "https://i.imgur.com/nT2JSNf.png",
+		link: "https://checkout-page.pages.dev/",
+		github: 'https://github.com/brandovidal/checkout-page'
+	},
+	{
+		title: "Edie  homepage",
+		description: "Homepage is a popular task that a developer has to do. In this challenge, you will work with Edie - a small team providing web services. 🎮",
+		image: "https://i.imgur.com/wBhs9RA.png",
+		link: "https://edie-homepage.pages.dev/",
+		github: 'https://github.com/brandovidal/edie-homepage'
+	},
+	{
+		title: "Portfolio",
+		description: "A portfolio is the most important certificate when applying to a job. In this challenge, you will create a beautiful portfolio page. ❤️",
+		image: "https://i.imgur.com/oH3PxnZ.png",
+		link: "https://portfolio-master-403.pages.dev/",
+		github: 'https://github.com/brandovidal/portfolio-master'
+	}
+]
 ---
 
 <Layout title="Devchallenges">
@@ -8,50 +75,13 @@ import Card from "../components/Card.astro";
 		<h1>
 			<img src="/devchallengues.svg" alt="">
 		</h1>
-		<p class="instructions">
-			Responsive Web Developer
-		</p>
+		<p class="instructions">Responsive Web Developer</p>
 		<ul role="list" class="link-card-grid">
-			<Card
-				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252F404PageThumbnail.png%3Falt%3Dmedia%26token%3D81f7c567-c0bc-446f-a549-07eeda31c5ef&w=750&q=75"
-				demo="https://404-not-found-324.pages.dev/" code="https://github.com/brandovidal/404-not-found"
-				title="404 Not found"
-				body="This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills. 👾" />
-			<Card
-				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252FmyTeamThumbnail.png%3Falt%3Dmedia%26token%3D3dc1bba0-52b9-440d-8a54-fa31ec7c84d8&w=750&q=75"
-				demo="https://my-team-page-a1o.pages.dev/" code="https://github.com/brandovidal/my-team-page"
-				title="My team page"
-				body="This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page. 🚀" />
-			<Card
-				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252FinteriorConsultantThumbnail.png%3Falt%3Dmedia%26token%3Dfb5f8229-8eb9-4d70-b0d4-fbd2829a0cf0&w=750&q=75"
-				demo="https://interior-consultant.pages.dev/" code="https://github.com/brandovidal/interior-consultant"
-				title="Interior Consultant"
-				body="Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning. ⚒️" />
-			<Card
-				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252FrecipeBlogThumbnail.png%3Falt%3Dmedia%26token%3D2d696d3c-a8cb-4c7c-907b-561ae1144cc9&w=750&q=75"
-				demo="https://recipe-page.pages.dev/" code="https://github.com/brandovidal/recipe-page"
-				title="Recipe page"
-				body="Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one. 😎" />
-			<Card
-				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252FGalleryThumbnail.png%3Falt%3Dmedia%26token%3D92894792-41d1-4d99-8cbb-e828322c87fd&w=750&q=75"
-				demo="https://my-gallery-page.pages.dev/" code="https://github.com/brandovidal/my-gallery-page"
-				title="My Gallery"
-				body="Inspired by instagram, in this challenge you will work with a similar design to instagram profile page. 📷" />
-			<Card
-				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252FCheckoutThumbnail.png%3Falt%3Dmedia%26token%3Dc7ffdbe3-7206-44f2-b1e6-a6b99bf81901&w=750&q=75"
-				demo="https://checkout-page.pages.dev/" code="https://github.com/brandovidal/checkout-page"
-				title="Checkout Page"
-				body="In this challenge, you will work with the form in a modern and minimal design. The challenge will bring your HTML and CSS to a new level. 💻" />
-			<Card
-				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252FEdieHomageThumbnail.png%3Falt%3Dmedia%26token%3D72c573b5-6389-425c-b947-de63f0f5b2ef&w=750&q=75"
-				demo="https://edie-homepage.pages.dev/" code="https://github.com/brandovidal/edie-homepage"
-				title="Edie  homepage"
-				body="Homepage is a popular task that a developer has to do. In this challenge, you will work with Edie - a small team providing web services. 🎮" />
-			<Card
-				link="https://devchallenges.io/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdevchallenges-1234.appspot.com%2Fo%2FchallengesDesigns%252FPortfolioThumbnail.png%3Falt%3Dmedia%26token%3D417f625d-715a-4611-8215-2c19aaf490f9&w=750&q=75"
-				demo="https://portfolio-master-403.pages.dev/" code="https://github.com/brandovidal/portfolio-master"
-				title="Portfolio"
-				body="A portfolio is the most important certificate when applying to a job. In this challenge, you will create a beautiful portfolio page. ❤️" />
+			{
+			projects.map(({ title, description, image, link, github }) => (
+				<Card title={title} description={description} image={image} link={link} github={github} />
+			))
+			}
 		</ul>
 	</main>
 </Layout>
