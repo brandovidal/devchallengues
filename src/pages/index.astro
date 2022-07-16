@@ -79,7 +79,7 @@ const projects: Props[] = [
 		<ul role="list" class="link-card-grid">
 			{
 			projects.map(({ title, description, image, link, github }) => (
-				<Card title={title} description={description} image={image} link={link} github={github} />
+			<Card title={title} description={description} image={image} link={link} github={github} />
 			))
 			}
 		</ul>
@@ -87,8 +87,23 @@ const projects: Props[] = [
 </Layout>
 
 <style>
+	/* Fonts */
+	/*--------------------*/
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins.woff2') format('woff2');
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+	}
+
 	:root {
 		--bg-gradient: linear-gradient(90deg, #100e1d, #bdbdbc);
+
+		font-family: 'Poppins', system-ui, sans-serif;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 400;
 	}
 
 	h1 {
@@ -108,7 +123,7 @@ const projects: Props[] = [
 	main {
 		margin: auto;
 		padding: 1em;
-		max-width: 65ch;
+		max-width: 96ch;
 	}
 
 	.instructions {
@@ -123,7 +138,7 @@ const projects: Props[] = [
 
 	.link-card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(32ch, 1fr));
 		gap: 1.5em;
 		padding: 0;
 	}

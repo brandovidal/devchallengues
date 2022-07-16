@@ -34,6 +34,7 @@ const { title, description, image = 'https://picsum.photos/id/532/584/434', link
 	}
 
 	.card {
+		position: relative;
 		list-style: none;
 		display: flex;
 		flex-direction: column;
@@ -79,6 +80,7 @@ const { title, description, image = 'https://picsum.photos/id/532/584/434', link
 		outline: none;
 		border: 1px solid var(--bg-primary);
 		color: var(--bg-primary);
+		font-weight: bold;
 	}
 
 	.card a.link-primary {
@@ -101,8 +103,8 @@ const { title, description, image = 'https://picsum.photos/id/532/584/434', link
 	}
 
 	.card p {
-		margin: 0.75em 0;
-		height: 8em;
+		margin: 1em 0;
+		min-height: 7em;
 		font-size: var(--font-size-base);
 		color: var(--bg-secondary);
 		font-weight: 500;
@@ -112,6 +114,6 @@ const { title, description, image = 'https://picsum.photos/id/532/584/434', link
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		height: 3em;
+		min-height: 2.5em;
 	}
 </style>
