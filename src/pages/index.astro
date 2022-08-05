@@ -10,62 +10,83 @@ export interface Props {
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 
-const projects: Props[] = [
+interface LayoutProps {
+	title: string;
+	projects: Props[];
+}
+
+const layout: LayoutProps[] = [
 	{
-		title: "404 Not found",
-		description: "This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills. 👾",
-		image: "https://i.imgur.com/IQ8LlOW.png",
-		link: "https://404-not-found-324.pages.dev/",
-		github: 'https://github.com/brandovidal/404-not-found'
+		title: 'Responsive Web Developer',
+		projects: [
+			{
+				title: "404 Not found",
+				description: "This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills. 👾",
+				image: "https://i.imgur.com/IQ8LlOW.png",
+				link: "https://404-not-found-324.pages.dev/",
+				github: 'https://github.com/brandovidal/404-not-found'
+			},
+			{
+				title: "My team page",
+				description: "This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page. 🚀",
+				image: "https://i.imgur.com/DmjNYWf.png",
+				link: "https://my-team-page-a1o.pages.dev/",
+				github: 'https://github.com/brandovidal/my-team-page'
+			},
+			{
+				title: "Interior Consultant",
+				description: "Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning. ⚒️",
+				image: "https://i.imgur.com/v0whVdg.png",
+				link: "https://interior-consultant.pages.dev/",
+				github: 'https://github.com/brandovidal/interior-consultant'
+			},
+			{
+				title: "Recipe page",
+				description: "Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one. 😎",
+				image: "https://i.imgur.com/ZrYjmPH.png",
+				link: "https://recipe-page.pages.dev/",
+				github: 'https://github.com/brandovidal/recipe-page'
+			},
+			{
+				title: "My Gallery",
+				description: "Inspired by instagram, in this challenge you will work with a similar design to instagram profile page. 📷",
+				image: "https://i.imgur.com/zTUWjKT.png",
+				link: "https://my-gallery-page.pages.dev/",
+				github: 'https://github.com/brandovidal/my-gallery-page'
+			},
+			{
+				title: "Checkout Page",
+				description: "In this challenge, you will work with the form in a modern and minimal design. The challenge will bring your HTML and CSS to a new level. 💻",
+				image: "https://i.imgur.com/nT2JSNf.png",
+				link: "https://checkout-page.pages.dev/",
+				github: 'https://github.com/brandovidal/checkout-page'
+			},
+			{
+				title: "Edie  homepage",
+				description: "Homepage is a popular task that a developer has to do. In this challenge, you will work with Edie - a small team providing web services. 🎮",
+				image: "https://i.imgur.com/wBhs9RA.png",
+				link: "https://edie-homepage.pages.dev/",
+				github: 'https://github.com/brandovidal/edie-homepage'
+			},
+			{
+				title: "Portfolio",
+				description: "A portfolio is the most important certificate when applying to a job. In this challenge, you will create a beautiful portfolio page. ❤️",
+				image: "https://i.imgur.com/oH3PxnZ.png",
+				link: "https://portfolio-master-403.pages.dev/",
+				github: 'https://github.com/brandovidal/portfolio-master'
+			}
+		]
 	},
 	{
-		title: "My team page",
-		description: "This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page. 🚀",
-		image: "https://i.imgur.com/DmjNYWf.png",
-		link: "https://my-team-page-a1o.pages.dev/",
-		github: 'https://github.com/brandovidal/my-team-page'
-	},
-	{
-		title: "Interior Consultant",
-		description: "Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning. ⚒️",
-		image: "https://i.imgur.com/v0whVdg.png",
-		link: "https://interior-consultant.pages.dev/",
-		github: 'https://github.com/brandovidal/interior-consultant'
-	},
-	{
-		title: "Recipe page",
-		description: "Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one. 😎",
-		image: "https://i.imgur.com/ZrYjmPH.png",
-		link: "https://recipe-page.pages.dev/",
-		github: 'https://github.com/brandovidal/recipe-page'
-	},
-	{
-		title: "My Gallery",
-		description: "Inspired by instagram, in this challenge you will work with a similar design to instagram profile page. 📷",
-		image: "https://i.imgur.com/zTUWjKT.png",
-		link: "https://my-gallery-page.pages.dev/",
-		github: 'https://github.com/brandovidal/my-gallery-page'
-	},
-	{
-		title: "Checkout Page",
-		description: "In this challenge, you will work with the form in a modern and minimal design. The challenge will bring your HTML and CSS to a new level. 💻",
-		image: "https://i.imgur.com/nT2JSNf.png",
-		link: "https://checkout-page.pages.dev/",
-		github: 'https://github.com/brandovidal/checkout-page'
-	},
-	{
-		title: "Edie  homepage",
-		description: "Homepage is a popular task that a developer has to do. In this challenge, you will work with Edie - a small team providing web services. 🎮",
-		image: "https://i.imgur.com/wBhs9RA.png",
-		link: "https://edie-homepage.pages.dev/",
-		github: 'https://github.com/brandovidal/edie-homepage'
-	},
-	{
-		title: "Portfolio",
-		description: "A portfolio is the most important certificate when applying to a job. In this challenge, you will create a beautiful portfolio page. ❤️",
-		image: "https://i.imgur.com/oH3PxnZ.png",
-		link: "https://portfolio-master-403.pages.dev/",
-		github: 'https://github.com/brandovidal/portfolio-master'
+
+		title: 'Frontend Web Developer',
+		projects: [{
+			title: "Button component",
+			description: 'One of the best ways to learn front-end libraries is to create a reusable component. In this challenge, your task is to create a reusable button. 💡',
+			image: "https://i.imgur.com/kufGxBl.png",
+			link: "https://button-component.pages.dev/",
+			github: 'https://github.com/brandovidal/button-component'
+		}]
 	}
 ]
 ---
@@ -75,14 +96,19 @@ const projects: Props[] = [
 		<h1>
 			<img src="/devchallengues.svg" alt="">
 		</h1>
-		<p class="instructions">Responsive Web Developer</p>
-		<ul role="list" class="link-card-grid">
-			{
-			projects.map(({ title, description, image, link, github }) => (
-			<Card title={title} description={description} image={image} link={link} github={github} />
-			))
-			}
-		</ul>
+		{
+		layout.map(({ title, projects }) => (
+		<section>
+			<p class="instructions">{title}</p>
+			<ul role="list" class="link-card-grid">
+				{
+				projects.map(({ title, description, image, link, github }) =>
+				<Card title={title} description={description} image={image} link={link} github={github} />)
+				}
+			</ul>
+		</section>
+		))
+		}
 	</main>
 </Layout>
 
