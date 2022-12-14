@@ -1,171 +1,188 @@
 ---
 export interface Props {
-	title: string;
-	description: string;
-	image?: string;
-	link?: string;
-	github?: string;
+  title: string
+  description: string
+  image?: string
+  link?: string
+  github?: string
 }
 
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
 
 interface LayoutProps {
-	title: string;
-	projects: Props[];
+  title: string
+  projects: Props[]
 }
 
 const layout: LayoutProps[] = [
-	{
-		title: 'Responsive Web Developer',
-		projects: [
-			{
-				title: "404 Not found",
-				description: "This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills. 👾",
-				image: "https://i.imgur.com/IQ8LlOW.png",
-				link: "https://404-not-found-324.pages.dev/",
-				github: 'https://github.com/brandovidal/404-not-found'
-			},
-			{
-				title: "My team page",
-				description: "This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page. 🚀",
-				image: "https://i.imgur.com/DmjNYWf.png",
-				link: "https://my-team-page-a1o.pages.dev/",
-				github: 'https://github.com/brandovidal/my-team-page'
-			},
-			{
-				title: "Interior Consultant",
-				description: "Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning. ⚒️",
-				image: "https://i.imgur.com/v0whVdg.png",
-				link: "https://interior-consultant.pages.dev/",
-				github: 'https://github.com/brandovidal/interior-consultant'
-			},
-			{
-				title: "Recipe page",
-				description: "Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one. 😎",
-				image: "https://i.imgur.com/ZrYjmPH.png",
-				link: "https://recipe-page.pages.dev/",
-				github: 'https://github.com/brandovidal/recipe-page'
-			},
-			{
-				title: "My Gallery",
-				description: "Inspired by instagram, in this challenge you will work with a similar design to instagram profile page. 📷",
-				image: "https://i.imgur.com/zTUWjKT.png",
-				link: "https://my-gallery-page.pages.dev/",
-				github: 'https://github.com/brandovidal/my-gallery-page'
-			},
-			{
-				title: "Checkout Page",
-				description: "In this challenge, you will work with the form in a modern and minimal design. The challenge will bring your HTML and CSS to a new level. 💻",
-				image: "https://i.imgur.com/nT2JSNf.png",
-				link: "https://checkout-page.pages.dev/",
-				github: 'https://github.com/brandovidal/checkout-page'
-			},
-			{
-				title: "Edie  homepage",
-				description: "Homepage is a popular task that a developer has to do. In this challenge, you will work with Edie - a small team providing web services. 🎮",
-				image: "https://i.imgur.com/wBhs9RA.png",
-				link: "https://edie-homepage.pages.dev/",
-				github: 'https://github.com/brandovidal/edie-homepage'
-			},
-			{
-				title: "Portfolio",
-				description: "A portfolio is the most important certificate when applying to a job. In this challenge, you will create a beautiful portfolio page. ❤️",
-				image: "https://i.imgur.com/oH3PxnZ.png",
-				link: "https://portfolio-master-403.pages.dev/",
-				github: 'https://github.com/brandovidal/portfolio-master'
-			}
-		]
-	},
-	{
-
-		title: 'Frontend Web Developer',
-		projects: [{
-			title: "Button component",
-			description: 'One of the best ways to learn front-end libraries is to create a reusable component. In this challenge, your task is to create a reusable button. 💡',
-			image: "https://i.imgur.com/kufGxBl.png",
-			link: "https://button-component.pages.dev/",
-			github: 'https://github.com/brandovidal/button-component'
-		}]
-	}
+  {
+    title: 'Responsive Web Developer',
+    projects: [
+      {
+        title: '404 Not found',
+        description:
+          'This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills. 👾',
+        image: 'https://i.imgur.com/IQ8LlOW.png',
+        link: 'https://404-not-found-324.pages.dev/',
+        github: 'https://github.com/brandovidal/404-not-found'
+      },
+      {
+        title: 'My team page',
+        description:
+          'This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page. 🚀',
+        image: 'https://i.imgur.com/DmjNYWf.png',
+        link: 'https://my-team-page-a1o.pages.dev/',
+        github: 'https://github.com/brandovidal/my-team-page'
+      },
+      {
+        title: 'Interior Consultant',
+        description:
+          'Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning. ⚒️',
+        image: 'https://i.imgur.com/v0whVdg.png',
+        link: 'https://interior-consultant.pages.dev/',
+        github: 'https://github.com/brandovidal/interior-consultant'
+      },
+      {
+        title: 'Recipe page',
+        description:
+          'Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one. 😎',
+        image: 'https://i.imgur.com/ZrYjmPH.png',
+        link: 'https://recipe-page.pages.dev/',
+        github: 'https://github.com/brandovidal/recipe-page'
+      },
+      {
+        title: 'My Gallery',
+        description:
+          'Inspired by instagram, in this challenge you will work with a similar design to instagram profile page. 📷',
+        image: 'https://i.imgur.com/zTUWjKT.png',
+        link: 'https://my-gallery-page.pages.dev/',
+        github: 'https://github.com/brandovidal/my-gallery-page'
+      },
+      {
+        title: 'Checkout Page',
+        description:
+          'In this challenge, you will work with the form in a modern and minimal design. The challenge will bring your HTML and CSS to a new level. 💻',
+        image: 'https://i.imgur.com/nT2JSNf.png',
+        link: 'https://checkout-page.pages.dev/',
+        github: 'https://github.com/brandovidal/checkout-page'
+      },
+      {
+        title: 'Edie  homepage',
+        description:
+          'Homepage is a popular task that a developer has to do. In this challenge, you will work with Edie - a small team providing web services. 🎮',
+        image: 'https://i.imgur.com/wBhs9RA.png',
+        link: 'https://edie-homepage.pages.dev/',
+        github: 'https://github.com/brandovidal/edie-homepage'
+      },
+      {
+        title: 'Portfolio',
+        description:
+          'A portfolio is the most important certificate when applying to a job. In this challenge, you will create a beautiful portfolio page. ❤️',
+        image: 'https://i.imgur.com/oH3PxnZ.png',
+        link: 'https://portfolio-master-403.pages.dev/',
+        github: 'https://github.com/brandovidal/portfolio-master'
+      }
+    ]
+  },
+  {
+    title: 'Frontend Web Developer',
+    projects: [
+      {
+        title: 'Button component',
+        description:
+          'One of the best ways to learn front-end libraries is to create a reusable component. In this challenge, your task is to create a reusable button. 💡',
+        image: 'https://i.imgur.com/kufGxBl.png',
+        link: 'https://button-component.pages.dev/',
+        github: 'https://github.com/brandovidal/button-component'
+      },
+      {
+        title: 'Input component',
+        description:
+          'I love airbnb UI, it is so modern and clean. In this challenge, you will work with a similar UI to airbnb - windbnb. 💡',
+        image: 'https://imgur.com/3nU9KhM.png',
+        link: 'https://input-component.pages.dev/',
+        github: 'https://github.com/brandovidal/input-component'
+      }
+    ]
+  }
 ]
 ---
 
 <Layout title="Devchallenges">
-	<main>
-		<h1>
-			<img src="/devchallengues.svg" alt="">
-		</h1>
-		{
-		layout.map(({ title, projects }) => (
-		<section>
-			<p class="instructions">{title}</p>
-			<ul role="list" class="link-card-grid">
-				{
-				projects.map(({ title, description, image, link, github }) =>
-				<Card title={title} description={description} image={image} link={link} github={github} />)
-				}
-			</ul>
-		</section>
-		))
-		}
-	</main>
+  <main>
+    <h1>
+      <img src="/devchallengues.svg" alt="" />
+    </h1>
+    {
+      layout.map(({ title, projects }) => (
+        <section>
+          <p class="instructions">{title}</p>
+          <ul role="list" class="link-card-grid">
+            {projects.map(({ title, description, image, link, github }) => (
+              <Card title={title} description={description} image={image} link={link} github={github} />
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </main>
 </Layout>
 
 <style>
-	/* Fonts */
-	/*--------------------*/
-	@font-face {
-		font-family: 'Poppins';
-		src: url('/fonts/Poppins.woff2') format('woff2');
-		font-style: normal;
-		font-weight: 400;
-		font-display: swap;
-	}
+  /* Fonts */
+  /*--------------------*/
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
 
-	:root {
-		--bg-gradient: linear-gradient(90deg, #100e1d, #bdbdbc);
+  :root {
+    --bg-gradient: linear-gradient(90deg, #100e1d, #bdbdbc);
 
-		font-family: 'Poppins', system-ui, sans-serif;
-		font-size: 16px;
-		line-height: 24px;
-		font-weight: 400;
-	}
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
 
-	h1 {
-		display: flex;
-		margin: 0.35em 0.35em 0.5em 0.35em;
-		font-size: 4em;
-	}
+  h1 {
+    display: flex;
+    margin: 0.35em 0.35em 0.5em 0.35em;
+    font-size: 4em;
+  }
 
-	h1 img {
-		margin: 0;
-		padding: 0;
-		text-transform: uppercase;
-		color: var(--color-text);
-		width: 3em;
-	}
+  h1 img {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: var(--color-text);
+    width: 3em;
+  }
 
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 96ch;
-	}
+  main {
+    margin: auto;
+    padding: 1em;
+    max-width: 96ch;
+  }
 
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background-image: var(--bg-gradient);
-		padding: 1rem 1.5em;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-		background-position-y: 100%;
-	}
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    background-image: var(--bg-gradient);
+    padding: 1rem 1.5em;
+    border-radius: 0.4rem;
+    color: var(--color-bg);
+    background-position-y: 100%;
+  }
 
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(32ch, 1fr));
-		gap: 1.5em;
-		padding: 0;
-	}
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32ch, 1fr));
+    gap: 1.5em;
+    padding: 0;
+  }
 </style>
